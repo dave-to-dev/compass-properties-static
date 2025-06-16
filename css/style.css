@@ -1,0 +1,405 @@
+/* Custom Styles for Compass Properties */
+
+/* WhatsApp Button Animation */
+.whatsapp-btn {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1A3028;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #EA8224;
+}
+
+/* Hero section background image */
+.hero-bg {
+    background-image: linear-gradient(rgba(26, 48, 40, 0.2), rgba(26, 48, 40, 0.2)), url('../imgs/5787255989848887152.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Image overlay effects */
+.image-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(26, 48, 40, 0.8), rgba(234, 130, 36, 0.8));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.image-overlay:hover::before {
+    opacity: 1;
+}
+
+.image-overlay .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.image-overlay:hover .overlay-content {
+    opacity: 1;
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Form styles */
+.form-input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #EA8224;
+    box-shadow: 0 0 0 3px rgba(234, 130, 36, 0.1);
+}
+
+/* Navigation dropdown animation */
+.dropdown-menu {
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu.show {
+    transform: translateY(0);
+}
+
+/* Parallax effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Section spacing */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Text animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button hover effects */
+.btn-primary {
+    background: linear-gradient(45deg, #EA8224, #F0A04A);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #F0A04A, #EA8224);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(234, 130, 36, 0.3);
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-menu-enter.show {
+    max-height: 500px;
+}
+
+/* Gallery grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Testimonial styles */
+.testimonial-card {
+    background: linear-gradient(135deg, #1A3028, #3B4F58);
+    border-left: 4px solid #EA8224;
+}
+
+/* Counter animation */
+.counter {
+    font-weight: bold;
+    color: #EA8224;
+}
+
+/* Social media icons */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Progress bar */
+.progress-bar {
+    background: linear-gradient(90deg, #EA8224, #F0A04A);
+    height: 4px;
+    border-radius: 2px;
+    transition: width 0.8s ease;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .hero-bg {
+        background-attachment: scroll;
+    }
+    
+    .parallax {
+        background-attachment: scroll;
+    }
+    
+    .section-padding {
+        padding: 40px 0;
+    }
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.slideshow-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slideshow-slide.active {
+    opacity: 1;
+}
+
+.slideshow-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.slideshow-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.slideshow-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slideshow-dot.active {
+    background-color: #EA8224;
+}
+
+.slideshow-dot:hover {
+    background-color: rgba(234, 130, 36, 0.8);
+}
+
+.slideshow-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.slideshow-arrows:hover {
+    background-color: rgba(234, 130, 36, 0.8);
+}
+
+.slideshow-prev {
+    left: 15px;
+}
+
+.slideshow-next {
+    right: 15px;
+}
+
+.slideshow-arrows i {
+    font-size: 16px;
+}
+
+/* Slideshow Caption Styles */
+.slideshow-caption {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, rgba(26, 48, 40, 0.9), rgba(234, 130, 36, 0.9));
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.slideshow-slide.active .slideshow-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slideshow-caption h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive slideshow */
+@media (max-width: 768px) {
+    .slideshow-arrows {
+        width: 35px;
+        height: 35px;
+    }
+
+    .slideshow-arrows i {
+        font-size: 14px;
+    }
+
+    .slideshow-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .slideshow-nav {
+        bottom: 15px;
+        gap: 6px;
+    }
+
+    .slideshow-caption {
+        bottom: 45px;
+        left: 15px;
+        right: 15px;
+        padding: 8px 15px;
+    }
+
+    .slideshow-caption h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .whatsapp-btn,
+    nav,
+    .social-icon {
+        display: none !important;
+    }
+}
+
+
+/* Custom Styles for Compass Properties */
+
+.text-background {
+  background-color: rgb(26, 49, 40);
+  color: white; /* Adjust text color for readability */
+  padding: 10px;
+  border-radius: 5px; /* Optional styling */
+}

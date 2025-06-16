@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Compass Properties</title>
+    <meta name="description" content="Explore our comprehensive construction and real estate services including residential construction, commercial buildings, and property management.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'timber-green': '#1A3028',
+                        'timber-light': '#3B4F58',
+                        'timber-dark': '#0C1916',
+                        'tahiti-gold': '#EA8224',
+                        'tahiti-light': '#F0A04A',
+                        'custom-black': '#050606',
+                        'custom-white': '#FBFBFB'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-white text-custom-black">
+    <!-- Navigation -->
+    <nav class="bg-timber-green shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="imgs/balck-white-log.png" alt="Compass Properties" class="h-10 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="services.html" class="text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        
+                        <!-- Projects Dropdown -->
+                        <div class="relative group">
+                            <button class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                                Projects <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                <a href="new-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">New Projects</a>
+                                <a href="under-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">Under Construction</a>
+                                <a href="finished-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">Finished Projects</a>
+                            </div>
+                        </div>
+                        
+                        <a href="construction-updates.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Updates</a>
+                        <a href="media.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Media</a>
+                        <a href="contact.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-custom-white hover:text-tahiti-gold focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-timber-green">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="about.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="services.html" class="text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="new-projects.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">New Projects</a>
+                <a href="under-construction.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Under Construction</a>
+                <a href="finished-projects.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Finished Projects</a>
+                <a href="construction-updates.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Updates</a>
+                <a href="media.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Media</a>
+                <a href="contact.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-timber-green to-timber-light pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-custom-white mb-4 fade-in">Our Services</h1>
+            <p class="text-xl text-custom-white max-w-3xl mx-auto fade-in">
+                Comprehensive construction and real estate solutions tailored to meet your unique needs and exceed your expectations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Services Section -->
+    <section class="section-padding bg-custom-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Residential Construction -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover fade-in">
+                    <img src="imgs/5787255989848887155.jpg" alt="Residential Construction" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-tahiti-gold text-3xl mb-4">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-timber-green mb-4">Residential Construction</h3>
+                        <p class="text-gray-700 mb-6">
+                            From custom homes to residential developments, we create living spaces that combine comfort, functionality, and aesthetic appeal.
+                        </p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Custom Home Design</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Residential Developments</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Home Renovations</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Interior Design Services</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary text-white font-bold py-2 px-6 rounded-lg inline-block">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Commercial Construction -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover fade-in">
+                    <img src="imgs/5787255989848887159.jpg" alt="Commercial Construction" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-tahiti-gold text-3xl mb-4">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-timber-green mb-4">Commercial Construction</h3>
+                        <p class="text-gray-700 mb-6">
+                            Professional commercial buildings designed for efficiency, functionality, and modern business requirements.
+                        </p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Office Buildings</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Retail Spaces</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Industrial Facilities</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Mixed-Use Developments</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary text-white font-bold py-2 px-6 rounded-lg inline-block">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Real Estate Services -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover fade-in">
+                    <img src="imgs/5787255989848887160.jpg" alt="Real Estate Services" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-tahiti-gold text-3xl mb-4">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-timber-green mb-4">Real Estate Services</h3>
+                        <p class="text-gray-700 mb-6">
+                            Comprehensive real estate solutions including sales, property management, and investment opportunities.
+                        </p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Property Sales</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Property Management</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Investment Consulting</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Market Analysis</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary text-white font-bold py-2 px-6 rounded-lg inline-block">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services Section -->
+    <section class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-timber-green mb-4">Additional Services</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    We offer a comprehensive range of specialized services to support all aspects of your construction and real estate needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover fade-in">
+                    <div class="text-tahiti-gold text-4xl mb-4">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-timber-green mb-3">Architectural Design</h3>
+                    <p class="text-gray-700">
+                        Professional architectural design services for residential and commercial projects.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover fade-in">
+                    <div class="text-tahiti-gold text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-timber-green mb-3">Project Management</h3>
+                    <p class="text-gray-700">
+                        End-to-end project management ensuring timely delivery and quality results.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover fade-in">
+                    <div class="text-tahiti-gold text-4xl mb-4">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-timber-green mb-3">Quality Assurance</h3>
+                    <p class="text-gray-700">
+                        Rigorous quality control processes to ensure the highest standards in every project.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover fade-in">
+                    <div class="text-tahiti-gold text-4xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-timber-green mb-3">24/7 Support</h3>
+                    <p class="text-gray-700">
+                        Round-the-clock customer support and maintenance services for all our clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section-padding bg-custom-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-timber-green mb-4">Our Process</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    We follow a systematic approach to ensure every project is completed successfully, on time, and within budget.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center fade-in">
+                    <div class="bg-tahiti-gold text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-timber-green mb-3">Consultation</h3>
+                    <p class="text-gray-700">
+                        Initial meeting to understand your needs, vision, and project requirements.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center fade-in">
+                    <div class="bg-tahiti-gold text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-timber-green mb-3">Planning</h3>
+                    <p class="text-gray-700">
+                        Detailed project planning, design development, and timeline establishment.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center fade-in">
+                    <div class="bg-tahiti-gold text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-timber-green mb-3">Execution</h3>
+                    <p class="text-gray-700">
+                        Professional construction and implementation with regular progress updates.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center fade-in">
+                    <div class="bg-tahiti-gold text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                        4
+                    </div>
+                    <h3 class="text-xl font-bold text-timber-green mb-3">Delivery</h3>
+                    <p class="text-gray-700">
+                        Final inspection, handover, and ongoing support for your completed project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-timber-green">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-custom-white mb-6">Ready to Start Your Project?</h2>
+                <p class="text-lg text-custom-white mb-8 max-w-3xl mx-auto">
+                    Contact us today for a free consultation and let us help bring your construction or real estate vision to life.
+                </p>
+                <div class="space-x-4">
+                    <a href="contact.html" class="bg-tahiti-gold hover:bg-tahiti-light text-white font-bold py-3 px-8 rounded-lg inline-block transition-colors duration-300">
+                        Get Free Consultation
+                    </a>
+                    <a href="tel:+1234567890" class="border-2 border-custom-white text-custom-white hover:bg-custom-white hover:text-timber-green font-bold py-3 px-8 rounded-lg inline-block transition-colors duration-300">
+                        Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

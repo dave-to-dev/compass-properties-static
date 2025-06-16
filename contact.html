@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Compass Properties</title>
+    <meta name="description" content="Get in touch with Compass Properties for your construction and real estate needs. Contact us for consultations, quotes, and project inquiries.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'timber-green': '#1A3028',
+                        'timber-light': '#3B4F58',
+                        'timber-dark': '#0C1916',
+                        'tahiti-gold': '#EA8224',
+                        'tahiti-light': '#F0A04A',
+                        'custom-black': '#050606',
+                        'custom-white': '#FBFBFB'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-white text-custom-black">
+    <!-- Navigation -->
+    <nav class="bg-timber-green shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="imgs/balck-white-log.png" alt="Compass Properties" class="h-10 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="services.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        
+                        <!-- Projects Dropdown -->
+                        <div class="relative group">
+                            <button class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                                Projects <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                <a href="new-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">New Projects</a>
+                                <a href="under-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">Under Construction</a>
+                                <a href="finished-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">Finished Projects</a>
+                            </div>
+                        </div>
+                        
+                        <a href="construction-updates.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Updates</a>
+                        <a href="media.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Media</a>
+                        <a href="contact.html" class="text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-custom-white hover:text-tahiti-gold focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-timber-green">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="about.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="services.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="new-projects.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">New Projects</a>
+                <a href="under-construction.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Under Construction</a>
+                <a href="finished-projects.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Finished Projects</a>
+                <a href="construction-updates.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Updates</a>
+                <a href="media.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Media</a>
+                <a href="contact.html" class="text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-timber-green to-timber-light pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-custom-white mb-4 fade-in">Contact Us</h1>
+            <p class="text-xl text-custom-white max-w-3xl mx-auto fade-in">
+                Ready to start your next project? Get in touch with our team for expert consultation and personalized service.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-custom-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="fade-in">
+                    <h2 class="text-3xl font-bold text-timber-green mb-6">Send Us a Message</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
+                                <select id="service" name="service" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold focus:border-transparent">
+                                    <option value="">Select a service</option>
+                                    <option value="residential">Residential Construction</option>
+                                    <option value="commercial">Commercial Construction</option>
+                                    <option value="real-estate">Real Estate Services</option>
+                                    <option value="consultation">General Consultation</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+                            <input type="text" id="subject" name="subject" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="6" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="btn-primary text-white font-bold py-3 px-8 rounded-lg w-full md:w-auto">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="fade-in">
+                    <h2 class="text-3xl font-bold text-timber-green mb-6">Get in Touch</h2>
+                    <p class="text-lg text-gray-700 mb-8">
+                        We're here to help with all your construction and real estate needs. Contact us through any of the following methods:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <!-- Address -->
+                        <div class="flex items-start">
+                            <div class="bg-tahiti-gold text-white p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-timber-green mb-2">Office Address</h3>
+                                <p class="text-gray-700">
+                                    Kirkos Sub City, Woreda 03<br>
+                                    (Wollo Sefer), Amanelwa Bldng. 2nd Floor, <br>
+                                    Addis Ababa, Ethiopia<br>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="flex items-start">
+                            <div class="bg-tahiti-gold text-white p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-timber-green mb-2">Phone Numbers</h3>
+                                <p class="text-gray-700">
+                                    Main Office: +251 114 701287<br>
+                                    Moblie: +251 911 235694<br>
+                                    Emergency: +251 09 123456<br>
+                                    WhatsApp: +251 09 123456
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="flex items-start">
+                            <div class="bg-tahiti-gold text-white p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-timber-green mb-2">Email Addresses</h3>
+                                <p class="text-gray-700">
+                                    General: info@compassproperties.com<br>
+                                    Sales: sales@compassproperties.com<br>
+                                    Support: support@compassproperties.com
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div class="flex items-start">
+                            <div class="bg-tahiti-gold text-white p-3 rounded-lg mr-4">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-timber-green mb-2">Business Hours</h3>
+                                <p class="text-gray-700">
+                                    Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                    Saturday: 9:00 AM - 4:00 PM<br>
+                                    Sunday: Closed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="mt-8">
+                        <h3 class="text-lg font-bold text-timber-green mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://web.facebook.com/YaTVEthiopia?_rdc=1&_rdr#" target="_blank" class="social-icon bg-tahiti-gold text-white p-3 rounded-lg hover:bg-tahiti-light transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-icon bg-tahiti-gold text-white p-3 rounded-lg hover:bg-tahiti-light transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@compass.propertie?_t=ZM-8wuy6qv4HZA&_r=1" target="_blank" class="social-icon bg-tahiti-gold text-white p-3 rounded-lg hover:bg-tahiti-light transition-colors">
+                                <i class="fab fa-tiktok text-xl"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-icon bg-tahiti-gold text-white p-3 rounded-lg hover:bg-tahiti-light transition-colors">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-timber-green mb-4">Find Us</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Visit our office for in-person consultations and to see our portfolio of completed projects.
+                </p>
+            </div>
+            
+            <!-- Placeholder for map - replace with actual map integration -->
+            <div class="bg-gray-300 h-96 rounded-lg flex items-center justify-center fade-in">
+                <div class="text-center">
+                    <i class="fas fa-map-marked-alt text-6xl text-gray-500 mb-4"></i>
+                    <p class="text-gray-600 text-lg">Interactive Map Coming Soon</p>
+                    <p class="text-gray-500">123 Construction Avenue, Business District</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

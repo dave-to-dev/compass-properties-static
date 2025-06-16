@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery - Compass Properties</title>
+    <meta name="description" content="Explore our media gallery featuring project photos, videos, client testimonials, and behind-the-scenes content from Compass Properties.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'timber-green': '#1A3028',
+                        'timber-light': '#3B4F58',
+                        'timber-dark': '#0C1916',
+                        'tahiti-gold': '#EA8224',
+                        'tahiti-light': '#F0A04A',
+                        'custom-black': '#050606',
+                        'custom-white': '#FBFBFB'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-white text-custom-black">
+    <!-- Navigation -->
+    <nav class="bg-timber-green shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="imgs/balck-white-log.png" alt="Compass Properties" class="h-10 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="services.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        
+                        <!-- Projects Dropdown -->
+                        <div class="relative group">
+                            <button class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                                Projects <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                <a href="new-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">New Projects</a>
+                                <a href="under-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">Under Construction</a>
+                                <a href="finished-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">Finished Projects</a>
+                            </div>
+                        </div>
+                        
+                        <a href="construction-updates.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Updates</a>
+                        <a href="media.html" class="text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium">Media</a>
+                        <a href="contact.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-custom-white hover:text-tahiti-gold focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-timber-green">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="about.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="services.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="new-projects.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">New Projects</a>
+                <a href="under-construction.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Under Construction</a>
+                <a href="finished-projects.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Finished Projects</a>
+                <a href="construction-updates.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Updates</a>
+                <a href="media.html" class="text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Media</a>
+                <a href="contact.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-timber-green to-timber-light pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-custom-white mb-4 fade-in">Media Gallery</h1>
+            <p class="text-xl text-custom-white max-w-3xl mx-auto fade-in">
+                Explore our collection of project photos, videos, client testimonials, and behind-the-scenes content.
+            </p>
+        </div>
+    </section>
+
+    <!-- Media Categories -->
+    <section class="py-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 fade-in">
+                <button class="media-filter-btn active bg-tahiti-gold text-white px-6 py-2 rounded-full font-medium" data-filter="all">All Media</button>
+                <button class="media-filter-btn bg-white text-timber-green border border-timber-green px-6 py-2 rounded-full font-medium hover:bg-timber-green hover:text-white transition-colors" data-filter="photos">Photos</button>
+                <button class="media-filter-btn bg-white text-timber-green border border-timber-green px-6 py-2 rounded-full font-medium hover:bg-timber-green hover:text-white transition-colors" data-filter="videos">Videos</button>
+                <button class="media-filter-btn bg-white text-timber-green border border-timber-green px-6 py-2 rounded-full font-medium hover:bg-timber-green hover:text-white transition-colors" data-filter="testimonials">Testimonials</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="section-padding bg-custom-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="gallery-grid">
+                <!-- Photo 1 -->
+                <div class="media-item photos rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/C M_Exterior - Elevation.jpg" alt="Modern Building Exterior" class="w-full h-64 object-cover gallery-image cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="font-bold text-timber-green mb-2">Modern Building Exterior</h3>
+                        <p class="text-gray-600 text-sm">Contemporary architectural design with clean lines and premium materials</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 2 -->
+                <div class="media-item photos rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/L_Exterior - Crossing.jpg" alt="Urban Development" class="w-full h-64 object-cover gallery-image cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="font-bold text-timber-green mb-2">Urban Development</h3>
+                        <p class="text-gray-600 text-sm">Mixed-use development integrating residential and commercial spaces</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 3 -->
+                <div class="media-item photos rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/L_Exterior - Detail (2).jpg" alt="Architectural Details" class="w-full h-64 object-cover gallery-image cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="font-bold text-timber-green mb-2">Architectural Details</h3>
+                        <p class="text-gray-600 text-sm">Intricate design elements showcasing craftsmanship and attention to detail</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 4 -->
+                <div class="media-item photos rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/L_Exterior - Detail .jpg" alt="Building Facade" class="w-full h-64 object-cover gallery-image cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="font-bold text-timber-green mb-2">Building Facade</h3>
+                        <p class="text-gray-600 text-sm">Elegant facade design combining functionality with aesthetic appeal</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 5 -->
+                <div class="media-item photos rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/L_Exterior - Detail Street.jpg" alt="Street View" class="w-full h-64 object-cover gallery-image cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="font-bold text-timber-green mb-2">Street View</h3>
+                        <p class="text-gray-600 text-sm">Integration with urban landscape and pedestrian-friendly design</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 6 -->
+                <div class="media-item photos rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/5787255989848887152.jpg" alt="Construction Progress" class="w-full h-64 object-cover gallery-image cursor-pointer">
+                    <div class="p-4">
+                        <h3 class="font-bold text-timber-green mb-2">Construction Progress</h3>
+                        <p class="text-gray-600 text-sm">Behind-the-scenes look at our construction process and quality standards</p>
+                    </div>
+                </div>
+                
+                <!-- Video 1 -->
+                <div class="media-item videos bg-white rounded-lg overflow-hidden shadow-lg fade-in">
+                    <div class="relative bg-gray-800 h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-play-circle text-6xl mb-4 text-tahiti-gold"></i>
+                            <h3 class="text-lg font-bold">Project Walkthrough</h3>
+                            <p class="text-sm">Virtual tour of completed luxury apartment complex</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-timber-green mb-2">Luxury Apartment Tour</h3>
+                        <p class="text-gray-600 text-sm">Take a virtual tour through our award-winning residential project</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="media-item videos bg-white rounded-lg overflow-hidden shadow-lg fade-in">
+                    <div class="relative bg-gray-800 h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-play-circle text-6xl mb-4 text-tahiti-gold"></i>
+                            <h3 class="text-lg font-bold">Construction Timelapse</h3>
+                            <p class="text-sm">24-month construction process in 3 minutes</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-timber-green mb-2">Building Process</h3>
+                        <p class="text-gray-600 text-sm">Watch the complete construction process from foundation to completion</p>
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="media-item videos bg-white rounded-lg overflow-hidden shadow-lg fade-in">
+                    <div class="relative bg-gray-800 h-64 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-play-circle text-6xl mb-4 text-tahiti-gold"></i>
+                            <h3 class="text-lg font-bold">Company Overview</h3>
+                            <p class="text-sm">Learn about our history and values</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-timber-green mb-2">About Compass Properties</h3>
+                        <p class="text-gray-600 text-sm">Discover our company story, mission, and commitment to excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-timber-green mb-4">Client Testimonials</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Hear what our satisfied clients have to say about their experience working with Compass Properties.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="media-item testimonials testimonial-card rounded-lg p-6 text-white fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-tahiti-gold rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Sarah Johnson</h3>
+                            <p class="text-sm opacity-80">Residential Client</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">
+                        "Compass Properties exceeded our expectations in every way. The quality of construction, attention to detail, and professional service made our dream home a reality."
+                    </p>
+                    <div class="flex text-tahiti-gold">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="media-item testimonials testimonial-card rounded-lg p-6 text-white fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-tahiti-gold rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Michael Chen</h3>
+                            <p class="text-sm opacity-80">Commercial Client</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">
+                        "Working with Compass Properties on our office building was seamless. They delivered on time, within budget, and the quality is outstanding."
+                    </p>
+                    <div class="flex text-tahiti-gold">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="media-item testimonials testimonial-card rounded-lg p-6 text-white fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-tahiti-gold rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Emily Rodriguez</h3>
+                            <p class="text-sm opacity-80">Real Estate Investor</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 italic">
+                        "I've worked with many construction companies, but Compass Properties stands out for their professionalism, quality, and reliability. Highly recommended!"
+                    </p>
+                    <div class="flex text-tahiti-gold">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Feed -->
+    <section class="section-padding bg-custom-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-timber-green mb-4">Follow Us</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Stay connected with us on social media for the latest updates, behind-the-scenes content, and project highlights.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <a href="https://web.facebook.com/YaTVEthiopia?_rdc=1&_rdr#" target="_blank" class="social-icon bg-blue-600 text-white p-8 rounded-lg hover:bg-blue-700 transition-colors fade-in">
+                    <i class="fab fa-facebook text-4xl mb-4"></i>
+                    <h3 class="font-bold">Facebook</h3>
+                    <p class="text-sm opacity-80">Follow our page</p>
+                </a>
+                
+                <a href="#" target="_blank" class="social-icon bg-gradient-to-r from-purple-500 to-pink-500 text-white p-8 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors fade-in">
+                    <i class="fab fa-instagram text-4xl mb-4"></i>
+                    <h3 class="font-bold">Instagram</h3>
+                    <p class="text-sm opacity-80">See our photos</p>
+                </a>
+                
+                <a href="https://www.tiktok.com/@compass.propertie?_t=ZM-8wuy6qv4HZA&_r=1" target="_blank" class="social-icon bg-black text-white p-8 rounded-lg hover:bg-gray-800 transition-colors fade-in">
+                    <i class="fab fa-tiktok text-4xl mb-4"></i>
+                    <h3 class="font-bold">TikTok</h3>
+                    <p class="text-sm opacity-80">Watch our videos</p>
+                </a>
+                
+                <a href="#" target="_blank" class="social-icon bg-red-600 text-white p-8 rounded-lg hover:bg-red-700 transition-colors fade-in">
+                    <i class="fab fa-youtube text-4xl mb-4"></i>
+                    <h3 class="font-bold">YouTube</h3>
+                    <p class="text-sm opacity-80">Subscribe to channel</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // Media filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.media-filter-btn');
+            const mediaItems = document.querySelectorAll('.media-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-tahiti-gold', 'text-white');
+                        b.classList.add('bg-white', 'text-timber-green', 'border', 'border-timber-green');
+                    });
+                    this.classList.add('active', 'bg-tahiti-gold', 'text-white');
+                    this.classList.remove('bg-white', 'text-timber-green', 'border', 'border-timber-green');
+                    
+                    // Filter media items
+                    mediaItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

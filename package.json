@@ -1,0 +1,17 @@
+{
+  "name": "compass-properties-website",
+  "version": "1.0.0",
+  "description": "Modern website for Compass Properties construction and real estate company",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "dev": "live-server --port=3000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "live-server": "^1.2.2"
+  },
+  "keywords": ["construction", "real-estate", "website"],
+  "author": "Compass Properties",
+  "license": "MIT"
+}

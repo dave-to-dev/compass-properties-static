@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Compass Properties</title>
+    <meta name="description" content="Explore Compass Properties' portfolio of construction and real estate projects including new developments, ongoing construction, and completed projects.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'timber-green': '#1A3028',
+                        'timber-light': '#3B4F58',
+                        'timber-dark': '#0C1916',
+                        'tahiti-gold': '#EA8224',
+                        'tahiti-light': '#F0A04A',
+                        'custom-black': '#050606',
+                        'custom-white': '#FBFBFB'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-white text-custom-black">
+    <!-- Navigation -->
+    <nav class="bg-timber-green shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="imgs/balck-white-log.png" alt="Compass Properties" class="h-10 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="services.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        
+                        <!-- Projects Dropdown -->
+                        <div class="relative group">
+                            <button class="text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                                Projects <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                <a href="new-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">New Projects</a>
+                                <a href="under-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">Under Construction</a>
+                                <a href="finished-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-tahiti-gold hover:text-white">Finished Projects</a>
+                            </div>
+                        </div>
+                        
+                        <a href="construction-updates.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Updates</a>
+                        <a href="media.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Media</a>
+                        <a href="contact.html" class="text-custom-white hover:text-tahiti-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-custom-white hover:text-tahiti-gold focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-timber-green">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="about.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="services.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="new-projects.html" class="text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">New Projects</a>
+                <a href="under-construction.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Under Construction</a>
+                <a href="finished-projects.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Finished Projects</a>
+                <a href="construction-updates.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Updates</a>
+                <a href="media.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Media</a>
+                <a href="contact.html" class="text-custom-white hover:text-tahiti-gold block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-timber-green to-timber-light pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-custom-white mb-4 fade-in">Our Projects</h1>
+            <p class="text-xl text-custom-white max-w-3xl mx-auto fade-in">
+                Discover our portfolio of exceptional construction and real estate projects that showcase our commitment to quality and innovation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="section-padding bg-custom-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- New Projects -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover fade-in">
+                    <img src="imgs/L_Exterior - Crossing.jpg" alt="New Projects" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-tahiti-gold text-3xl mb-4">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-timber-green mb-4">New Projects</h3>
+                        <p class="text-gray-700 mb-6">
+                            Explore our upcoming developments and new construction projects that are in the planning and design phase.
+                        </p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Luxury Residential Complex</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Modern Office Building</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Mixed-Use Development</li>
+                        </ul>
+                        <a href="new-projects.html" class="btn-primary text-white font-bold py-2 px-6 rounded-lg inline-block">
+                            View New Projects
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Under Construction -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover fade-in">
+                    <img src="imgs/L_Exterior - Detail (2).jpg" alt="Under Construction" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-tahiti-gold text-3xl mb-4">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-timber-green mb-4">Under Construction</h3>
+                        <p class="text-gray-700 mb-6">
+                            Follow the progress of our current construction projects with regular updates and milestone achievements.
+                        </p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Commercial Plaza - 75% Complete</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Residential Towers - 60% Complete</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Shopping Center - 40% Complete</li>
+                        </ul>
+                        <a href="under-construction.html" class="btn-primary text-white font-bold py-2 px-6 rounded-lg inline-block">
+                            View Progress
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Finished Projects -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover fade-in">
+                    <img src="imgs/L_Exterior - Detail Street.jpg" alt="Finished Projects" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-tahiti-gold text-3xl mb-4">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-timber-green mb-4">Finished Projects</h3>
+                        <p class="text-gray-700 mb-6">
+                            Browse our portfolio of successfully completed projects that demonstrate our expertise and quality standards.
+                        </p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> 150+ Completed Projects</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Award-Winning Designs</li>
+                            <li class="flex items-center"><i class="fas fa-check text-tahiti-gold mr-2"></i> Satisfied Clients</li>
+                        </ul>
+                        <a href="finished-projects.html" class="btn-primary text-white font-bold py-2 px-6 rounded-lg inline-block">
+                            View Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Gallery -->
+    <section class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-timber-green mb-4">Featured Projects</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Highlighting some of our most successful and innovative construction and real estate projects.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="image-overlay rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/C M_Exterior - Elevation.jpg" alt="Modern Residential Complex" class="w-full h-64 object-cover gallery-image">
+                    <div class="overlay-content">
+                        <h3 class="text-xl font-bold mb-2">Modern Residential Complex</h3>
+                        <p class="mb-4">Luxury apartments with contemporary design and premium amenities</p>
+                        <span class="bg-tahiti-gold text-white px-3 py-1 rounded text-sm">Completed</span>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="image-overlay rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/L_Exterior - Detail .jpg" alt="Commercial Office Building" class="w-full h-64 object-cover gallery-image">
+                    <div class="overlay-content">
+                        <h3 class="text-xl font-bold mb-2">Commercial Office Building</h3>
+                        <p class="mb-4">State-of-the-art office complex with modern facilities</p>
+                        <span class="bg-green-500 text-white px-3 py-1 rounded text-sm">In Progress</span>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="image-overlay rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/5787255989848887152.jpg" alt="Urban Development" class="w-full h-64 object-cover gallery-image">
+                    <div class="overlay-content">
+                        <h3 class="text-xl font-bold mb-2">Urban Development</h3>
+                        <p class="mb-4">Mixed-use development with residential and commercial spaces</p>
+                        <span class="bg-blue-500 text-white px-3 py-1 rounded text-sm">Planning</span>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="image-overlay rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/5787255989848887155.jpg" alt="Luxury Villas" class="w-full h-64 object-cover gallery-image">
+                    <div class="overlay-content">
+                        <h3 class="text-xl font-bold mb-2">Luxury Villas</h3>
+                        <p class="mb-4">Premium residential villas with private gardens and pools</p>
+                        <span class="bg-tahiti-gold text-white px-3 py-1 rounded text-sm">Completed</span>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="image-overlay rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/5787255989848887159.jpg" alt="Shopping Center" class="w-full h-64 object-cover gallery-image">
+                    <div class="overlay-content">
+                        <h3 class="text-xl font-bold mb-2">Shopping Center</h3>
+                        <p class="mb-4">Modern retail complex with entertainment facilities</p>
+                        <span class="bg-green-500 text-white px-3 py-1 rounded text-sm">In Progress</span>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="image-overlay rounded-lg overflow-hidden shadow-lg fade-in">
+                    <img src="imgs/5787255989848887160.jpg" alt="Industrial Complex" class="w-full h-64 object-cover gallery-image">
+                    <div class="overlay-content">
+                        <h3 class="text-xl font-bold mb-2">Industrial Complex</h3>
+                        <p class="mb-4">Modern industrial facilities with advanced infrastructure</p>
+                        <span class="bg-tahiti-gold text-white px-3 py-1 rounded text-sm">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Statistics -->
+    <section class="section-padding bg-timber-green">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-custom-white mb-4">Project Statistics</h2>
+                <p class="text-lg text-custom-white max-w-3xl mx-auto">
+                    Our track record speaks for itself with impressive numbers that showcase our experience and success.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center counters-section">
+                <div class="fade-in">
+                    <div class="counter text-4xl md:text-5xl font-bold text-tahiti-gold mb-2" data-target="150">0</div>
+                    <p class="text-custom-white text-lg">Total Projects</p>
+                </div>
+                <div class="fade-in">
+                    <div class="counter text-4xl md:text-5xl font-bold text-tahiti-gold mb-2" data-target="12">0</div>
+                    <p class="text-custom-white text-lg">Ongoing Projects</p>
+                </div>
+                <div class="fade-in">
+                    <div class="counter text-4xl md:text-5xl font-bold text-tahiti-gold mb-2" data-target="8">0</div>
+                    <p class="text-custom-white text-lg">New Projects</p>
+                </div>
+                <div class="fade-in">
+                    <div class="counter text-4xl md:text-5xl font-bold text-tahiti-gold mb-2" data-target="98">0</div>
+                    <p class="text-custom-white text-lg">Success Rate %</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-custom-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-timber-green mb-6">Ready to Start Your Project?</h2>
+                <p class="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
+                    Join our list of satisfied clients and let us bring your construction or real estate vision to life with our expertise and dedication.
+                </p>
+                <div class="space-x-4">
+                    <a href="contact.html" class="btn-primary text-white font-bold py-3 px-8 rounded-lg inline-block">
+                        Start Your Project
+                    </a>
+                    <a href="services.html" class="border-2 border-timber-green text-timber-green hover:bg-timber-green hover:text-white font-bold py-3 px-8 rounded-lg inline-block transition-colors duration-300">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
