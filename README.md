@@ -10,9 +10,15 @@ This repository contains the source code for the Compass Properties website. It 
 - **Tailwind CSS** for modern styling
 - **JavaScript** for dynamic interactions
 
+## 🚀 Temporary Website Link
+Since the website is not deployed yet, you can visit **Compass Properties** on Facebook for updates:
+🔗 [Compass Properties Facebook Page](https://web.facebook.com/YaTVEthiopia)
+
+<!-- TODO:
 ## 🚀 Live Preview
 The website is hosted on GitHub Pages. You can view it live here:
-🔗 [Compass Properties Facebook Page](https://web.facebook.com/YaTVEthiopia)
+🔗 [Compass Properties Website](https://your-username.github.io/compass-properties/)
+-->
 
 ## 💡 Features
 - Fully responsive design for mobile and desktop users
